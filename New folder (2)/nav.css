@@ -1,0 +1,78 @@
+/* NAVBAR START */
+.mind{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+    font-family: "Playfair Display", serif;
+}
+.nav-logo{
+    display: flex;
+    justify-content: center;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-black);
+}
+.img{
+    width: 6rem;
+    height: 5rem;
+}
+header {
+    overflow: hidden;
+    float: right;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(var(--items), 9rem);
+    position: relative;
+    font-weight: 300;
+    font-family: "Mukta", sans-serif;
+}
+
+.links a {
+    font-size: 1.5rem;
+    color: #000000;
+    padding: .75em;
+    text-align: right;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.links a:hover {
+    color: rgb(1, 116, 192);
+}
+.links .line {
+    background-color: rgb(1, 116, 192);;
+    height: 1.5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(1, 2, 0.2, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: var(--left, calc(100%/var(--items) * (var(--index) - 1)));
+    width: var(--width, calc(100% / var(--items)));
+    --index: 0;
+}
+.links a:hover~.line {
+    opacity: 1;
+}
+.links a:nth-of-type(1):hover~.line {
+    --index: 1;
+}
+.links a:nth-of-type(2):hover~.line {
+    --index: 2;
+}
+.links a:nth-of-type(3):hover~.line {
+    --index: 3;
+}
+.links a:nth-of-type(4):hover~.line {
+    --index: 4;
+}
+.links a:nth-of-type(5):hover~.line {
+    --index: 5;
+}
+/* NAVBAR END */
